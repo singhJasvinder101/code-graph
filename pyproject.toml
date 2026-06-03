@@ -1,0 +1,13 @@
+[project]
+name = "code-graph"
+version = "0.1.0"
+description = "LangGraph pipeline: plan an app, break it into implementation tasks, emit structured coder state (OpenAI + Pydantic)."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "dotenv>=0.9.9",
+    "langchain>=1.3.4",
+    "langchain-ollama>=1.1.0",
+    "langchain-openai>=1.2.2",
+]
+
