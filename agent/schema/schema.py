@@ -32,7 +32,9 @@ class Plan(BaseModel):
 class ImplementationTask(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
-    filepath: str = Field(description="The path to the file to be modified")
+    filepath: str = Field(
+        description="Relative path within the project root, e.g. 'src/main.py' (not absolute)"
+    )
     task_description: str = Field(
         description="Detailed description of the task to perform on the file"
     )

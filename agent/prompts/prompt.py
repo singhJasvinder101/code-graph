@@ -14,6 +14,7 @@ You are the ARCHITECT agent. Given this project plan, break it down into explici
 
 RULES:
 - For each FILE in the plan, create one or more IMPLEMENTATION TASKS.
+- Use filepath as a relative path within the project (e.g. "src/main.py"), never absolute paths.
 - In each task description:
     * Specify exactly what to implement.
     * Name the variables, functions, classes, and components to be defined.

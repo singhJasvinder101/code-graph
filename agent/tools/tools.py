@@ -1,11 +1,9 @@
 import pathlib
 import subprocess
 from typing import Tuple
-
 from langchain_core.tools import tool
 
 PROJECT_ROOT = pathlib.Path.cwd() / "generated_project"
-
 
 def safe_path_for_project(path: str) -> pathlib.Path:
     p = (PROJECT_ROOT / path).resolve()
