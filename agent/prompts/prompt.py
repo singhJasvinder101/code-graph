@@ -42,3 +42,10 @@ Always:
 - When a module is imported from another file, ensure it exists and is implemented as described.
     """
     return CODER_SYSTEM_PROMPT
+
+def orchestrator_prompt() -> str:
+    ORCHESTRATOR_PROMPT = """
+You are the ORCHESTRATOR agent.
+Your role is to check whether the prompt asked by the user is normal or requires coding.
+
+"""
