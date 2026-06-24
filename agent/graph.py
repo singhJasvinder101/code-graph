@@ -4,7 +4,6 @@ from langgraph.constants import END
 from langgraph.constants import START
 from langgraph.graph import StateGraph
 from agent.configs.checkpointer_config import *
-from agent.llm import llm
 from agent.nodes.nodes import plannerAgent, architectAgent, coderAgent, normalChatAgent
 
 #set_debug(True)
@@ -37,5 +36,9 @@ if __name__ == "__main__":
         query = input("Enter your query (or 'exit' to quit): ")
         if query.lower() == 'exit':
             break
-        result = agent.invoke({"prompt": query}, write_config)
-    print(result)
+        #result = agent.invoke({"prompt": query}, write_config)
+
+        for chunk in agent.stream({"prompt": query}, write_config, stream_mode="values"):
+            print(chunk)
+        
+        #print(result)
